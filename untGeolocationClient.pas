@@ -53,6 +53,7 @@ type
     gpbImgInterna: TGroupBox;
     Image1: TImage;
     Image2: TImage;
+    GroupBox1: TGroupBox;
   private
     { Private declarations }
   public

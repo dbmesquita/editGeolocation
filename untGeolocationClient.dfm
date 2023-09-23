@@ -7671,6 +7671,14 @@ object frmMain: TfrmMain
           end
         end
       end
+      object GroupBox1: TGroupBox
+        Left = 3
+        Top = 251
+        Width = 1311
+        Height = 392
+        Caption = 'GroupBox1'
+        TabOrder = 2
+      end
     end
     object tstReport: TTabSheet
       Caption = 'Relatorio'
