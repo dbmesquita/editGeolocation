@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/22 16:48:38.000.501,=C:\Users\mesquita\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/22 17:21:51.000.128,C:\Users\mesquita\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\mesquita\Documents\Embarcadero\Studio\Projects\editGeolocation\untGeolocationClient.dfm</Transaction>
+    <Transaction>2023/09/22 17:21:51.000.128,C:\Users\mesquita\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\mesquita\Documents\Embarcadero\Studio\Projects\editGeolocation\untGeolocationClient.pas</Transaction>
+    <Transaction>2023/09/22 17:23:57.000.272,C:\Users\mesquita\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mesquita\Documents\Embarcadero\Studio\Projects\editGeolocation\prjGeolocationClient.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
