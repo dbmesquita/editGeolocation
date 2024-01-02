@@ -11,6 +11,7 @@ object frmMain: TfrmMain
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   DesignSize = (
     1328
     691)
@@ -79,14 +80,14 @@ object frmMain: TfrmMain
         end
         object lblRca: TLabel
           Left = 4
-          Top = 172
+          Top = 174
           Width = 23
           Height = 15
           Caption = 'RCA'
         end
         object lblSupervisor: TLabel
           Left = 4
-          Top = 209
+          Top = 213
           Width = 55
           Height = 15
           Caption = 'Supervisor'
@@ -140,23 +141,20 @@ object frmMain: TfrmMain
           Width = 141
           Height = 23
           TabOrder = 6
-          Text = '56 - PRACA PRIMAVERA'
         end
         object edtRca: TEdit
           Left = 4
-          Top = 187
-          Width = 203
+          Top = 189
+          Width = 235
           Height = 23
           TabOrder = 7
-          Text = '569 - ROTA PRIMAVERA (ANDERSON)'
         end
         object edtSupervisor: TEdit
           Left = 4
-          Top = 224
-          Width = 202
+          Top = 228
+          Width = 235
           Height = 23
           TabOrder = 8
-          Text = '11 - EQUIPE KADOSH (ANTONIO)'
         end
         object gpbGeolocation: TGroupBox
           Left = 3
@@ -192,7 +190,7 @@ object frmMain: TfrmMain
             Width = 98
             Height = 23
             TabOrder = 0
-            Text = '-1.888888888888'
+            Text = '-1.359584'
           end
           object edtLongitude: TEdit
             Left = 107
@@ -200,7 +198,7 @@ object frmMain: TfrmMain
             Width = 98
             Height = 23
             TabOrder = 1
-            Text = '-47.888888888888'
+            Text = '-48.243717'
           end
           object edtDtGeolocation: TEdit
             Left = 209
@@ -208,7 +206,6 @@ object frmMain: TfrmMain
             Width = 95
             Height = 23
             TabOrder = 2
-            Text = '22/09/2023 18:41'
           end
         end
         object btnPesquisar: TButton
@@ -293,13 +290,23 @@ object frmMain: TfrmMain
         Height = 659
         Anchors = [akLeft, akTop, akRight, akBottom]
         TabOrder = 1
+        DesignSize = (
+          992
+          659)
+        object EdgeGoogleMapViewer: TEdgeGoogleMapViewer
+          Left = 1
+          Top = 2
+          Width = 990
+          Height = 655
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          TabOrder = 0
+        end
       end
       object GroupBox2: TGroupBox
         Left = 3
         Top = 443
         Width = 318
         Height = 216
-        Anchors = [akLeft, akTop, akBottom]
         Caption = 'Imagens do PDV'
         TabOrder = 2
         DesignSize = (

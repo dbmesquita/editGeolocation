@@ -3,10 +3,12 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, Vcl.OleCtrls, SHDocVw, MSHTML;
+  Vcl.Imaging.pngimage, Vcl.Imaging.jpeg, Vcl.OleCtrls, SHDocVw, MSHTML,
+  Vcl.Edge, Vcl.GoogleMap, Winapi.WebView2, Winapi.ActiveX;
 type
   TfrmMain = class(TForm)
     pclMain: TPageControl;
+    EdgeGoogleMapViewer: TEdgeGoogleMapViewer;
     tstGeolocation: TTabSheet;
     tstReport: TTabSheet;
     gpbSearch: TGroupBox;
@@ -51,18 +53,41 @@ type
     Button3: TButton;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
+    procedure FormCreate(Sender: TObject);
 
 
   private
-    { Private declarations }
+    FRighClickLatLng : TLatLng;
+
   public
     { Public declarations }
   end;
 var
   frmMain: TfrmMain;
   wbMaps:  TWebBrowser;
+  Zoom: integer;
 implementation
 {$R *.dfm}
+
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+var
+  Location: TLatLng;
+begin
+  Zoom := EdgeGoogleMapViewer.MapZoom;
+  Location.Latitude := TEdgeGoogleMapViewer.TextToCoord(edtLatitude.Text);
+  Location.Longitude := TEdgeGoogleMapViewer.TextToCoord(edtLongitude.Text);
+  EdgeGoogleMapViewer.GotoLocation(Location);
+
+end;
+
+
+
+initialization
+  TEdgeGoogleMapViewer.RegisterGoogleMapsApiKey('AIzaSyABn9wSWv7bb66zd-FXw5tY7hzS4agA54c');
+
+  {$WARN SYMBOL_PLATFORM OFF}
+  ReportMemoryLeaksOnShutdown := DebugHook <> 0;
 
 
 end.
