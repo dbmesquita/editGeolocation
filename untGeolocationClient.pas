@@ -84,7 +84,7 @@ end;
 
 
 initialization
-  TEdgeGoogleMapViewer.RegisterGoogleMapsApiKey('AIzaSyABn9wSWv7bb66zd-FXw5tY7hzS4agA54c');
+  TEdgeGoogleMapViewer.RegisterGoogleMapsApiKey('');
 
   {$WARN SYMBOL_PLATFORM OFF}
   ReportMemoryLeaksOnShutdown := DebugHook <> 0;
