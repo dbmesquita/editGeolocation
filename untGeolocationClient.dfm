@@ -309,9 +309,8 @@ object frmMain: TfrmMain
           Left = 5
           Top = 16
           Width = 308
-          Height = 164
+          Height = 167
           Anchors = [akLeft, akTop, akBottom]
-          ExplicitHeight = 161
         end
         object Button2: TButton
           Left = 84
